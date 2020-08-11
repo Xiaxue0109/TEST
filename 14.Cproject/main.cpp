@@ -22,6 +22,12 @@ TEST(testFunc, add) {
     EXPECT_EQ(add(6, 3), 13);
 } 
 
+TEST(test, Funcadd) {
+    EXPECT_EQ(add(1, 4), 9);
+    EXPECT_EQ(add(4, 8), 12);
+    EXPECT_EQ(add(6, 9), 19);
+}
+
 int main(int argc, char *argv[]) {
     return RUN_ALL_TESTS(); //RUN_ALL_TESTS()运行所有测试案例
 }

@@ -8,7 +8,10 @@
 #ifndef _TEST_H
 #define _TEST_H
 
-#define TEST(a, b) void a##b()
+//attribute是先于主函数执行
+#define TEST(a, b) \
+__attribute__((constructor)) \
+void a##_999_##b()
 
 #define EXPECT_EQ(a, b) printf("%s == %s ? %s\n", #a, #b, (a) == (b) ? "True" : "False");
 
